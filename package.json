@@ -1,0 +1,38 @@
+{
+  "name": "make-pkg-perfect",
+  "version": "1.0.5",
+  "description": "a tool for checking if your package is prepared for publish",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "ts-node test/index.ts",
+    "build:commonjs": "rimraf lib && tsc --target es5 --outDir lib --module commonjs --declaration",
+    "build:es": "rimraf es && tsc --target es6 --outDir es --module es6",
+    "build": "pnpm test && pnpm run build:commonjs && pnpm run build:es",
+    "ts": "ts-node src/",
+    "prepublishOnly": "pnpm run build"
+  },
+  "keywords": ["cli", "pkg-check", "tools"],
+  "author": {
+		"name": "lexmin0412",
+		"email": "zhangle_dev@outlook.com",
+		"url": "https://blog.cellerchan.top"
+	},
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.8.1",
+    "typescript": "^4.7.4"
+  },
+  "files": [
+    "es",
+    "lib"
+  ],
+  "types": "./lib/index.d.ts",
+  "jsnext:main": "./es/index.js",
+  "module": "./es/index.js",
+  "repository": {
+    "type": "git",
+		"url": "git+https://github.com/lexmin0412/make-pkg-perfect.git"
+  }
+}
