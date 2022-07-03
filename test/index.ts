@@ -1,5 +1,5 @@
 import * as path from 'path'
-import { checkPkgJson, checkStandardFiles, checkGitUser } from './../src/index'
+import { checkPkgJson, checkStandardFiles } from './../src/index'
 
 const pkgJsonPath = path.resolve(__dirname, '..', 'package.json')
 
@@ -22,10 +22,10 @@ if ( !checkStandardFilesSuccees ) {
 console.log('必要文件校验结束\n')
 
 
-console.log('校验 git 用户配置开始')
-checkGitUser(pkgJsonPath).then(({succeed: checkGitUserSucceed, message})=>{
-	if (!checkGitUserSucceed) {
-		console.error('校验 git 用户配置失败，错误原因', message)
-	}
-	console.log('校验 git 用户配置结束\n')
-})
+// console.log('校验 git 用户配置开始')
+// checkGitUser(pkgJsonPath).then(({succeed: checkGitUserSucceed, message})=>{
+// 	if (!checkGitUserSucceed) {
+// 		console.error('校验 git 用户配置失败，错误原因', message)
+// 	}
+// 	console.log('校验 git 用户配置结束\n')
+// })
