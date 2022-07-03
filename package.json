@@ -3,6 +3,7 @@
   "version": "1.0.5",
   "description": "a tool for checking if your package is prepared for publish",
   "main": "./lib/index.js",
+	"bin": "./bin/mpp.js",
   "scripts": {
     "test": "ts-node test/index.ts",
     "build:commonjs": "rimraf lib && tsc --target es5 --outDir lib --module commonjs --declaration",
