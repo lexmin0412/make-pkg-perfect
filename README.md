@@ -12,7 +12,7 @@ npm install make-pkg-perfect
 
 ```ts
 import * as path from 'path'
-import { checkPkgJson, checkStandardFiles, checkGitUser } from './../src/index'
+import { checkPkgJson, checkStandardFiles, checkGitUser } from 'make-pkg-perfect'
 
 const pkgJsonPath = path.resolve(__dirname, '..', 'package.json')
 
