@@ -1,12 +1,15 @@
 {
   "name": "make-pkg-perfect",
-  "version": "1.1.0-beta.1",
+  "version": "1.1.0",
   "description": "a tool for checking if your package is prepared for publish",
   "main": "./lib/index.js",
-	"bin": {
-		"mpp": "./bin/mpp.js"
-	},
+  "bin": {
+    "make-pkg-perfect": "./bin/mpp.js",
+    "mpp": "./bin/mpp.js"
+  },
+  "packageManager": "pnpm@7.3.0",
   "scripts": {
+    "test:bin": "pnpm build && node ./bin/mpp.js",
     "test": "ts-node test/index.ts",
     "build:commonjs": "rimraf lib && tsc --target es5 --outDir lib --module commonjs --declaration",
     "build:es": "rimraf es && tsc --target es6 --outDir es --module es6",
@@ -14,12 +17,16 @@
     "ts": "ts-node src/",
     "prepublishOnly": "pnpm run build"
   },
-  "keywords": ["cli", "pkg-check", "tools"],
+  "keywords": [
+    "cli",
+    "pkg-check",
+    "tools"
+  ],
   "author": {
-		"name": "lexmin0412",
-		"email": "zhangle_dev@outlook.com",
-		"url": "https://blog.cellerchan.top"
-	},
+    "name": "lexmin0412",
+    "email": "zhangle_dev@outlook.com",
+    "url": "https://blog.cellerchan.top"
+  },
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^18.0.0",
@@ -36,6 +43,6 @@
   "module": "./es/index.js",
   "repository": {
     "type": "git",
-		"url": "git+https://github.com/lexmin0412/make-pkg-perfect.git"
+    "url": "git+https://github.com/lexmin0412/make-pkg-perfect.git"
   }
 }
