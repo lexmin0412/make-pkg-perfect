@@ -8,7 +8,15 @@ a tool for checking if your package is prepared for publish.
 npm install make-pkg-perfect
 ```
 
+or install globally:
+
+```sh
+npm install make-pkg-perfect -g
+```
+
 ## Usage
+
+### Use in code
 
 ```ts
 import * as path from 'path'
@@ -43,4 +51,10 @@ checkGitUser(pkgJsonPath).then(({succeed: checkGitUserSucceed, message})=>{
 	console.log('校验 git 用户配置结束\n')
 })
 
+```
+
+### Use in command line
+
+```sh
+mpp
 ```
