@@ -20,12 +20,3 @@ if ( !checkStandardFilesSuccees ) {
 	process.exit(1)
 }
 console.log('必要文件校验结束\n')
-
-
-// console.log('校验 git 用户配置开始')
-// checkGitUser(pkgJsonPath).then(({succeed: checkGitUserSucceed, message})=>{
-// 	if (!checkGitUserSucceed) {
-// 		console.error('校验 git 用户配置失败，错误原因', message)
-// 	}
-// 	console.log('校验 git 用户配置结束\n')
-// })
