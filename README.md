@@ -5,13 +5,13 @@ a tool for checking if your package is prepared for publish.
 ## Installation
 
 ```sh
-npm install make-pkg-perfect
+npm install @lexmin0412/make-pkg-perfect
 ```
 
 or install globally:
 
 ```sh
-npm install make-pkg-perfect -g
+npm install @lexmin0412/make-pkg-perfect -g
 ```
 
 ## Usage
@@ -20,7 +20,7 @@ npm install make-pkg-perfect -g
 
 ```ts
 import * as path from 'path'
-import { checkPkgJson, checkStandardFiles, checkGitUser } from 'make-pkg-perfect'
+import { checkPkgJson, checkStandardFiles, checkGitUser } from '@lexmin0412/make-pkg-perfect'
 
 const pkgJsonPath = path.resolve(__dirname, '..', 'package.json')
 
