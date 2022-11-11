@@ -1,5 +1,5 @@
 {
-  "name": "make-pkg-perfect",
+  "name": "@lexmin0412/make-pkg-perfect",
   "version": "1.1.0",
   "description": "a tool for checking if your package is prepared for publish",
   "main": "./lib/index.js",
@@ -15,7 +15,8 @@
     "build:es": "rimraf es && tsc --target es6 --outDir es --module es6",
     "build": "pnpm test && pnpm run build:commonjs && pnpm run build:es",
     "ts": "ts-node src/",
-    "prepublishOnly": "pnpm run build"
+    "prepublishOnly": "pnpm run build",
+    "release": "release-it --ci"
   },
   "keywords": [
     "cli",
@@ -30,6 +31,7 @@
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^18.0.0",
+    "release-it": "^15.5.0",
     "rimraf": "^3.0.2",
     "ts-node": "^10.8.1",
     "typescript": "^4.7.4"
