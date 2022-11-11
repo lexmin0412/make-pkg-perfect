@@ -18,6 +18,10 @@
     "prepublishOnly": "pnpm run build",
     "release": "release-it --ci"
   },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "keywords": [
     "cli",
     "pkg-check",
